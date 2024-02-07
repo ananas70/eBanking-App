@@ -16,6 +16,9 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.14.0-rc1'
+    // https://mvnrepository.com/artifact/com.opencsv/opencsv
+    implementation("com.opencsv:opencsv:5.7.1")
+
 }
 
 test {

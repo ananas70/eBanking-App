@@ -1,0 +1,19 @@
+4 Design Patterns:
+- SINGLETON - BankDatabase
+- COMMAND - gestionarea comenzilor. clase de comenzi
+            pentru fiecare acțiune specifică (creare utilizator, adăugare prieten, transfer bani etc.)
+- DECORATOR - pentru utilizator premium
+            - Contul de bază poate fi decorat cu funcționalități suplimentare precum scutirea de comisioane
+            pentru schimbul valutar sau reducerea la cumpărarea de acțiuni.
+
+    ALEGE intre astea 2 de jos:
+
+- OBSERVER - pentru recomandări și notificări
+           - implementarea sistemului de recomandări pentru cumpărarea de acțiuni.
+           Când se actualizează valorile acțiunilor, observatorii (utilizatorii) pot primi
+           notificări și recomandări în funcție de strategiile definite.
+
+- FACTORY - creezi diverse tipuri de conturi bancare în funcție de moneda specificată de utilizator
+            la crearea contului.
+
+- TEMPLATE

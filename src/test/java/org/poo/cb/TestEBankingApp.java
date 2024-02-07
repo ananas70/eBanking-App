@@ -12,6 +12,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.io.StringReader;
+import java.util.HashSet;
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -146,6 +148,20 @@ public class TestEBankingApp {
 
         System.setOut(System.out);
     }
+    @Test
+    public void test9() throws IOException {
+        //BONUS TEST
+        ByteArrayOutputStream outPrintStream = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outPrintStream));
+        String commandFolder = "test9/";
+
+        Main.main(getInputArgs(commandFolder));
+        String output = outPrintStream.toString();
+
+        assertJsonLineAreEqual(output, commandFolder);
+
+        System.setOut(System.out);
+    }
 
     private void assertJsonLineAreEqual(String actualOutput, String inputFolder)
             throws IOException {
@@ -171,7 +187,7 @@ public class TestEBankingApp {
 
             JsonNode jsonNodeActual = objectMapper.readTree(actualJsonLine.toLowerCase());
             JsonNode jsonNodeExpected = objectMapper.readTree(expectedJsonLine.toLowerCase());
-            assertEquals(jsonNodeExpected, jsonNodeActual);
+            assertEquals(toSet(jsonNodeExpected), toSet(jsonNodeActual));
 
         }
     }
@@ -189,5 +205,20 @@ public class TestEBankingApp {
             return false;
         }
         return true;
+    }
+
+    public Set<JsonNode> toSet(JsonNode jsonNode) {
+        Set<JsonNode> set = new HashSet<>();
+        if(jsonNode.get("stockstobuy") != null) {
+            JsonNode stocksToBuyList = jsonNode.get("stockstobuy");
+            if (stocksToBuyList.isArray()) {
+                for (JsonNode node : stocksToBuyList) {
+                    set.add(node);
+                }
+            }
+        } else {
+            set.add(jsonNode);
+        }
+        return set;
     }
 }

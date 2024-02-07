@@ -1,0 +1,20 @@
+CREATE USER ana_stoica70@email.com Ana Stoica 217 Ecaterina Teodoroiu TG Jiu 10025
+ADD ACCOUNT ana_stoica70@email.com USD
+ADD MONEY ana_stoica70@email.com USD 2100
+CREATE USER cristina1166@email.com Cristina Stoica 1 Udroii Street Curpen 504
+ADD ACCOUNT cristina1166@email.com USD
+ADD MONEY cristina1166@email.com USD 2000
+LIST PORTFOLIO ana_stoica70@email.com
+BUY PREMIUM ana_stoica70@email.com
+LIST PORTFOLIO ana_stoica70@email.com
+RECOMMEND STOCKS
+BUY STOCKS ana_stoica70@email.com JPM 10
+BUY STOCKS cristina1166@email.com JPM 10
+LIST PORTFOLIO ana_stoica70@email.com
+LIST PORTFOLIO cristina1166@email.com
+ADD ACCOUNT ana_stoica70@email.com EUR
+EXCHANGE MONEY ana_stoica70@email.com USD EUR 150
+LIST PORTFOLIO ana_stoica70@email.com
+ADD ACCOUNT cristina1166@email.com EUR
+EXCHANGE MONEY cristina1166@email.com USD EUR 150
+LIST PORTFOLIO cristina1166@email.com
