@@ -35,44 +35,23 @@ The purpose of this project is to contribute to the implementation of functional
 - **Create User**: 
 CREATE USER <email> <firstname> <lastname> <address>
 
-markdown
-Copy code
-
 - **Add Friend**: 
 ADD FRIEND <emailUser> <emailFriend>
-
-markdown
-Copy code
 
 - **Add Account**: 
 ADD ACCOUNT <email> <currency>
 
-markdown
-Copy code
-
 - **Deposit Money**: 
 ADD MONEY <email> <currency> <amount>
-
-markdown
-Copy code
 
 - **Exchange Currency**: 
 EXCHANGE MONEY <email> <sourceCurrency> <destinationCurrency> <amount>
 
-markdown
-Copy code
-
 - **Transfer to Friend**: 
 TRANSFER MONEY <email> <friendEmail> <currency> <amount>
 
-markdown
-Copy code
-
 - **Buy Stocks**: 
 BUY STOCKS <email> <company> <noOfStocks>
-
-markdown
-Copy code
 
 #### Stock Purchase Recommendation:
 
@@ -81,35 +60,22 @@ Copy code
 - **Command**: 
 RECOMMEND STOCKS {"stocksToBuy": ["AAPL", "TSLA"]}
 
-markdown
-Copy code
-
 ### Listing Commands
 
 - **List User**: 
 LIST USER <email>
 
-markdown
-Copy code
-
 - **List User Portfolio**: 
 LIST PORTFOLIO <email>
-
-markdown
-Copy code
 
 ### Bonus
 
 - **Purchase Premium Option**: 
 BUY PREMIUM <email>
 
-markdown
-Copy code
 
 ## Notes
 
-- For further details and specifications, refer to the associated project documentation.
+- Automated tests for validating the implemented functionality are included.
 
-- Automated tests for validating the implemented functionality are essential.
-
-- Using at least 4 design patterns is necessary, and their proper argumentation is crucial for the fina
+- Used 4 design patterns and provided detailed explanations for their usage.
